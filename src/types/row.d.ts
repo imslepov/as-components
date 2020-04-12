@@ -6,7 +6,7 @@ export type RowAlignProp = typeof ALIGN_LIST[number];
 export type RowDirectionProp = typeof DIRECTION_LIST[number];
 export type RowGuttersProp = boolean | DefaultSizeProp;
 
-export interface RowProps {
+export type RowProps = {
   tag: string;
   justify: RowJustifyProp;
   justifySm: RowJustifyProp;
@@ -25,4 +25,4 @@ export interface RowProps {
   guttersMd: RowGuttersProp;
   guttersLg: RowGuttersProp;
   guttersXl: RowGuttersProp;
-}
+};

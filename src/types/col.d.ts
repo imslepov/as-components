@@ -1,6 +1,6 @@
 export type ColNumericProp = number | string;
 
-export interface ColProps {
+export type ColProps = {
   tag: string;
   cols: ColNumericProp;
   sm: ColNumericProp;
@@ -22,4 +22,4 @@ export interface ColProps {
   lastMd: boolean;
   lastLg: boolean;
   lastXl: boolean;
-}
+};

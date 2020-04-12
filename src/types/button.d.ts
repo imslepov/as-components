@@ -1,10 +1,10 @@
 import { DefaultSizeProp } from "./index";
 import { LoaderShapeProp } from "./loader";
 
-export interface ButtonProps<
+export type ButtonProps<
   SizeProp = DefaultSizeProp,
   LoaderProp = LoaderShapeProp
-> {
+> = {
   tag: "button" | "a" | "router-link" | "nuxt-link";
   href: string;
   to: object | string;
@@ -19,4 +19,4 @@ export interface ButtonProps<
   block: boolean;
   pressed: boolean;
   nuxt: boolean;
-}
+};
