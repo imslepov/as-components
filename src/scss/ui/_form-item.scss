@@ -1,0 +1,23 @@
+.as-form-item {
+  margin-bottom: 16px;
+
+  &-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+
+    .has-error & {
+      color: $danger-color;
+    }
+  }
+
+  &-req {
+    color: red;
+    font-weight: 600;
+  }
+
+  &-hint {
+    margin-top: 2px;
+    font-size: 13px;
+  }
+}

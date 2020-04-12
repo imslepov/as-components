@@ -1,0 +1,66 @@
+@mixin indents-generator($indents) {
+  @for $index from 1 through length($indents) {
+    $indent: nth($indents, $index);
+    $i: $index - 1;
+
+    .ma-#{$i} {
+      margin: $indent !important;
+    }
+
+    .mt-#{$i} {
+      margin-top: $indent !important;
+    }
+
+    .mb-#{$i} {
+      margin-bottom: $indent !important;
+    }
+
+    .my-#{$i} {
+      margin-top: $indent !important;
+      margin-bottom: $indent !important;
+    }
+
+    .ml-#{$i} {
+      margin-left: $indent !important;
+    }
+
+    .mr-#{$i} {
+      margin-right: $indent !important;
+    }
+
+    .mx-#{$i} {
+      margin-left: $indent !important;
+      margin-right: $indent !important;
+    }
+
+    .pa-#{$i} {
+      padding: $indent !important;
+    }
+
+    .pt-#{$i} {
+      padding-top: $indent !important;
+    }
+
+    .pb-#{$i} {
+      padding-bottom: $indent !important;
+    }
+
+    .py-#{$i} {
+      padding-top: $indent !important;
+      padding-bottom: $indent !important;
+    }
+
+    .pl-#{$i} {
+      padding-left: $indent !important;
+    }
+
+    .pr-#{$i} {
+      padding-right: $indent !important;
+    }
+
+    .px-#{$i} {
+      padding-left: $indent !important;
+      padding-right: $indent !important;
+    }
+  }
+}

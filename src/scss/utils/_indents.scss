@@ -1,0 +1,11 @@
+@include media-down($media-sm) {
+  @include indents-generator(map-get($indents, "sm"));
+}
+
+@include media-up($media-sm) {
+  @include indents-generator(map-get($indents, "md"));
+}
+
+@include media-up($media-md) {
+  @include indents-generator(map-get($indents, "lg"));
+}

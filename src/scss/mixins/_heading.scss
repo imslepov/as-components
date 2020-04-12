@@ -1,0 +1,43 @@
+@mixin heading-generator($size) {
+  $current-indents: map-get($indents, $size);
+
+  h1,
+  .h1 {
+    font-size: map-get($h1-font-size, $size);
+    margin: nth($current-indents, 7) 0px;
+  }
+
+  h2,
+  .h2 {
+    font-size: map-get($h2-font-size, $size);
+    margin: nth($current-indents, 6) 0px;
+  }
+
+  h3,
+  .h3 {
+    font-size: map-get($h3-font-size, $size);
+    margin: nth($current-indents, 6) 0px;
+  }
+
+  h4,
+  .h4 {
+    font-size: map-get($h4-font-size, $size);
+    margin: nth($current-indents, 6) 0px;
+
+    & + .smaller {
+      margin: nth($current-indents, 5) 0px;
+    }
+  }
+
+  h5,
+  .h5 {
+    font-size: map-get($h5-font-size, $size);
+    margin: nth($current-indents, 5) 0px;
+  }
+
+  h6,
+  .h6 {
+    font-size: map-get($h6-font-size, $size);
+    margin: nth($current-indents, 5) 0px;
+  }
+}

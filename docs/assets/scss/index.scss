@@ -1,0 +1,23 @@
+// @import url('https://cdn.bootcss.com/github-markdown-css/3.0.1/github-markdown.min.css');
+@import '@/../src/scss/app';
+@import 'hljs';
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+.code-example {
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  margin-bottom: 32px;
+
+  &__demo {
+    padding: 16px;
+  }
+
+  &__pre {
+    margin: 0;
+    background: #f6f9fc;
+  }
+}

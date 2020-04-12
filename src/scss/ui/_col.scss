@@ -1,0 +1,27 @@
+.as-col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+
+  @include col-generator($count: $grid-cols);
+
+  @include media-down($media-sm) {
+    @include col-width(100%);
+  }
+
+  @include media-up($media-sm) {
+    @include col-generator("sm\\:", $grid-cols);
+  }
+
+  @include media-up($media-md) {
+    @include col-generator("md\\:", $grid-cols);
+  }
+
+  @include media-up($media-lg) {
+    @include col-generator("lg\\:", $grid-cols);
+  }
+
+  @include media-up($media-xl) {
+    @include col-generator("xl\\:", $grid-cols);
+  }
+}

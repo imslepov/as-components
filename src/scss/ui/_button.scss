@@ -1,0 +1,199 @@
+.as-button {
+  border: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $button-border-radius;
+  position: relative;
+  font-family: $button-font-family;
+  font-weight: $button-font-weight;
+  font-size: $button-font-size;
+  line-height: 1.25;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  user-select: none;
+  transition: $button-transition;
+
+  &:after {
+    content: "";
+    display: block;
+    min-height: inherit;
+    font-size: 0;
+  }
+
+  &-loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-left-color: transparent !important;
+    animation: linear infinite rotating 0.8s;
+    transition: opacity 0.2s;
+  }
+
+  &-prepend {
+    margin-right: 8px;
+    line-height: 0;
+  }
+
+  &-append {
+    margin-left: 8px;
+  }
+
+  &.is-primary {
+    color: $button-primary-color;
+    background: $button-primary-bg;
+    border: 1px solid $button-primary-bg;
+    box-shadow: 0 4px 6px rgba($button-primary-bg, 0.11), 0 1px 3px rgba(#000, 0.08);
+
+    &:hover, &:focus {
+      color: $button-primary-color-hover;
+      background: $button-primary-bg-hover;
+    }
+
+    &:active {
+      color: $button-primary-color-active;
+      background: $button-primary-bg-active;
+      box-shadow: 0 2px 3px rgba($button-primary-bg, 0.11), 0 1px 3px rgba(#000, 0.08);
+    }
+  }
+
+  &.is-secondary {
+    background: lighten(#f8f8fc, 1);
+    border: 1px solid darken(#f8f8fc, 5);
+
+    &:hover, &:focus {
+      background: #fff;
+    }
+  }
+
+  &.is-danger {
+    color: $button-primary-color;
+    background: $danger-color;
+    border: 1px solid $danger-color;
+    box-shadow: 0 4px 6px rgba($danger-color, 0.11), 0 1px 3px rgba(#000, 0.08);
+
+    &:hover, &:focus {
+      color: $button-primary-color-hover;
+      background: $danger-color;
+    }
+
+    &:active {
+      color: $button-primary-color-active;
+      background: $danger-color;
+      box-shadow: 0 2px 3px rgba($danger-color, 0.11), 0 1px 3px rgba(#000, 0.08);
+    }
+  }
+
+  &.is-warn {
+    color: $button-primary-color;
+    background: $warning-color;
+    border: 1px solid $warning-color;
+    box-shadow: 0 4px 6px rgba($warning-color, 0.11), 0 1px 3px rgba(#000, 0.08);
+
+    &:hover, &:focus {
+      color: $button-primary-color-hover;
+      background: $warning-color;
+    }
+
+    &:active {
+      color: $button-primary-color-active;
+      background: $warning-color;
+      box-shadow: 0 2px 3px rgba($warning-color, 0.11), 0 1px 3px rgba(#000, 0.08);
+    }
+  }
+
+  &.is-success {
+    color: $button-primary-color;
+    background: $success-color;
+    border: 1px solid $success-color;
+    box-shadow: 0 4px 6px rgba($success-color, 0.11), 0 1px 3px rgba(#000, 0.08);
+
+    &:hover, &:focus {
+      color: $button-primary-color-hover;
+      background: $success-color;
+    }
+
+    &:active {
+      color: $button-primary-color-active;
+      background: $success-color;
+      box-shadow: 0 2px 3px rgba($success-color, 0.11), 0 1px 3px rgba(#000, 0.08);
+    }
+  }
+
+  &.is-info {
+    color: $button-primary-color;
+    background: $info-color;
+    border: 1px solid $info-color;
+    box-shadow: 0 4px 6px rgba($success-color, 0.11), 0 1px 3px rgba(#000, 0.08);
+
+    &:hover, &:focus {
+      color: $button-primary-color-hover;
+      background: $info-color;
+    }
+
+    &:active {
+      color: $button-primary-color-active;
+      background: $info-color;
+      box-shadow: 0 2px 3px rgba($info-color, 0.11), 0 1px 3px rgba(#000, 0.08);
+    }
+  }
+
+  &.is-rounded {
+    border-radius: 20px;
+  }
+
+  &:disabled, &.is-disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &.is-disabled {
+    opacity: 0.8;
+    box-shadow: none;
+  }
+
+  &.is-loading {
+    color: transparent !important;
+
+    .as-button-prepend,
+    .as-button-append {
+      opacity: 0;
+    }
+  }
+
+  &.is-xs {
+    font-size: 12px;
+    padding: 3px 11px;
+  }
+
+  &.is-sm {
+    font-size: 13px;
+    padding: 6px 18px;
+  }
+
+  &.is-md {
+    padding: 11px 25px;
+  }
+
+  &.is-lg {
+    padding: 16px 32px;
+  }
+
+  &.is-xl {
+    padding: 22px 32px;
+  }
+
+  &.is-block {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+  }
+}

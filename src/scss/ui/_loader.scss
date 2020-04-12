@@ -1,0 +1,14 @@
+.as-loader {
+  svg {
+    vertical-align: middle;
+  }
+  
+  &-circle {
+    stroke: #fff;
+    animation: rotating 1s linear infinite;
+
+    circle {
+      stroke-opacity: 0.25;
+    }
+  }
+}

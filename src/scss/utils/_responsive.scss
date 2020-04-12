@@ -1,0 +1,4 @@
+@include generate-display("xs", 0px, $media-sm);
+@include generate-display("sm", $media-sm, $media-md);
+@include generate-display("md", $media-md, $media-lg);
+@include generate-display("lg", $media-lg, $media-xl);

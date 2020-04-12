@@ -1,0 +1,28 @@
+@mixin col-width($width) {
+  flex: 0 0 $width;
+  max-width: $width;
+}
+
+@mixin col-generator($prefix: "", $count: 24) {
+  &.#{$prefix}is-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+
+  @for $i from 1 to $count + 1 {
+    &.#{$prefix}is-#{$i} {
+      @include col-width(100% / $count * $i);
+    }
+  }
+}
+
+@mixin gutter-generator($prefix, $gutter-size) {
+  &.#{$prefix}has-gutters {
+    margin: 0 -$gutter-size;
+
+    & > .as-col {
+      padding: 0 $gutter-size;
+    }
+  }
+}

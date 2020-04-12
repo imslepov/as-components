@@ -1,0 +1,47 @@
+.as-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  $justify: (
+    "space-between",
+    "space-around",
+    "center",
+    "left",
+    "right",
+    "stretch",
+    "end",
+    "start",
+    "flex-end",
+    "flex-start"
+  );
+  $align: ("center", "flex-end", "flex-start", "baseline", "stretch");
+  $direction: ("column", "column-reverse", "row", "row-reverse");
+
+  @each $value in $justify {
+    &.is-justify-#{$value} {
+      justify-content: #{$value};
+    }
+  }
+
+  @each $value in $align {
+    &.is-align-#{$value} {
+      align-items: #{$value};
+    }
+  }
+
+  @each $value in $direction {
+    &.is-direction-#{$value} {
+      flex-direction: #{$value};
+    }
+  }
+
+  &.is-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  @include gutter-generator("xs", $grid-gutters-xs);
+  @include gutter-generator("sm", $grid-gutters-sm);
+  @include gutter-generator("md", $grid-gutters-md);
+  @include gutter-generator("lg", $grid-gutters-lg);
+  @include gutter-generator("xl", $grid-gutters-xl);
+}

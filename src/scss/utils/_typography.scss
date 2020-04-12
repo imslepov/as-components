@@ -1,0 +1,189 @@
+html,
+body {
+  background: #fff;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $text-color;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-family-headings;
+  color: $headings-color;
+  line-height: 1.2;
+
+  span {
+    color: #768195;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1,
+h2,
+.h1,
+.h2 {
+  font-weight: bold;
+}
+
+h3,
+h4,
+h5,
+h6,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 600;
+}
+
+@include media-down($media-sm) {
+  @include heading-generator("sm");
+}
+
+@include media-up($media-sm) {
+  @include heading-generator("md");
+}
+
+@include media-up($media-md) {
+  @include heading-generator("lg");
+}
+
+a {
+  text-decoration: none;
+  color: #77c040;
+}
+
+p {
+  margin: 16px 0;
+
+  &.smaller {
+    font-size: 13px;
+    margin: 8px 0;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.overline {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+}
+
+small,
+.small {
+  font-size: 12px;
+
+  a {
+    font-size: 12px;
+  }
+}
+
+b,
+.bold,
+strong,
+.strong {
+  font-weight: bold;
+}
+
+.muted {
+  opacity: 0.7;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.text-truncate {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.text-big {
+  font-size: 17px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-large {
+  font-size: 24px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-light {
+  color: #bac0ca;
+}
+
+.text-green {
+  color: #68a939;
+}
+
+.text-danger {
+  color: #ff5500;
+}
+
+.text-dark {
+  color: #32343d;
+}
+
+.text-black {
+  color: #000;
+}
+
+.text-gray {
+  color: #768195;
+}
+
+@include media-down($media-sm) {
+  .text-large {
+    font-size: 20px;
+  }
+}

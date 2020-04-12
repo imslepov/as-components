@@ -1,0 +1,47 @@
+@mixin generate-display($prefix, $media-min, $media-max) {
+  .#{$prefix} {
+    &-only {
+      display: none;
+
+      @include media-between($media-min + 1px, $media-max) {
+        display: block !important;
+      }
+    }
+
+    &-and-up {
+      display: none !important;
+
+      @include media-up($media-min + 1px) {
+        display: block !important;
+      }
+    }
+
+    &-and-down {
+      display: none !important;
+
+      @include media-down($media-min) {
+        display: block !important;
+      }
+    }
+  }
+
+  .hidden-#{$prefix} {
+    &-only {
+      @include media-between($media-min + 1px, $media-max) {
+        display: none !important;
+      }
+    }
+
+    &-and-up {
+      @include media-up($media-min + 1px) {
+        display: none !important;
+      }
+    }
+
+    &-and-down {
+      @include media-down($media-min) {
+        display: none !important;
+      }
+    }
+  }
+}
